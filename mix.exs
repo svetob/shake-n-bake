@@ -21,16 +21,18 @@ defmodule ShakeNBake.MixProject do
 
   defp deps do
     [
-      {:credo, "~> 0.9.1", only: [:dev], runtime: false}
+      {:credo, "~> 0.9.1", only: [:dev], runtime: false},
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 
   defp package do
     [
-      name: :logstash_json,
+      name: :shake_n_bake,
+      description: "Just save your code to recompile and test it. Piece o cake!",
       maintainers: ["Tobias Ara Svensson"],
       licenses: ["MIT"],
-      links: %{"Github" => "https://github.com/svetob/logstash-json"},
+      links: %{"Github" => "https://github.com/svetob/shake-n-bake"}
     ]
   end
 end

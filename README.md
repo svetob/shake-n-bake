@@ -1,6 +1,6 @@
 # shake-n-bake
 
-Just save your file to recompile and test it.
+Just save your code to recompile and test it.
 
 Piece o cake!
 
@@ -20,9 +20,18 @@ end
 
 In your `config/config.exs` file, add:
 
+```elixir
+config :shake_n_bake,
+  run_tests: true,
+  test_cmd: "mix test",
+  paths: ['./lib']
 ```
 
-```
+The following configurations are available:
+
+- `run_tests` - Set to `true` to run your tests on recompile.
+- `test_cmd` - Shell command to use for tests.
+- `paths` - List of paths to check for modified files in
 
 <!--
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
